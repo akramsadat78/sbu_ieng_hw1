@@ -29,8 +29,8 @@ app.get('/gis/testpoint?lat=:id,long=:id', (req, res) =>
        )
 
 /**********************put**************************/
-let port = process.env.port;
-
+//et port = process.env.port;
+port =3000;
 app.put('/gis/addpolygon', function (req, res) {
   
     let data = JSON.stringify(req.body, null, 2);
@@ -48,5 +48,3 @@ app.put('/gis/addpolygon', function (req, res) {
 })
 
   app.listen(port);
-
-//app.listen(port, () => console.log(`Example app listening on port ${port}!`))
